@@ -1,6 +1,6 @@
 # Knighthood - Game
 (temporary name)  
-Game developed in Unity, C# using turnbased combat with a hubworld where the player can choose adventurers (characters), upgrade armor and equipment, heal injured characters and choose a mission to a dungeon to explore/mission to complete. As a start a mission will be built up of 3 turn-based battles that the party has to survive to complete it. If fleeing mid-way through or dying outright the player earns what he got so far but not the reward for the quest. The goal is to eventually release this to Android and IOS so the gameplay and controls will be heavily tuned towards a mobile market.
+Game developed in Unity, C# using turnbased combat with a hubworld where the player can choose companions (characters), upgrade armor and equipment, heal injured characters and choose a mission to a dungeon to explore/mission to complete. As a start a mission will be built up of 3 turn-based battles that the party has to survive to complete it. If fleeing mid-way through or dying outright the player earns what he got so far but not the reward for the quest. The goal is to eventually release this to Android and IOS so the gameplay and controls will be heavily tuned towards a mobile market.
 
 
 # Phase 1 of project:
