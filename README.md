@@ -4,7 +4,7 @@ Game developed in Unity, C# using turnbased combat with a hubworld where the pla
 
 
 # Phase 1 of project:
-fully functioning turn-based combat with mock player and enemy characters
+The first phase of the project entails getting a turn-based combat system to work and to equip some mock-characters with working abilities and attributes(right now only health & mana). As well as having a game-master that controls who's turn it is to attack and ensure only 1 character can do a move at the time. Also a simple/bad AI for a start for the enemy. 
 
 **Combat start point**  
 ![Combat start](/Drafts/Combat_Drafts/Basic_Battle-start(1).png)
