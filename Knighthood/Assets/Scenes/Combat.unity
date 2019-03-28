@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 119627464}
   - component: {fileID: 119627463}
   m_Layer: 0
-  m_Name: temp_fiende_01_Project_KnightHood
+  m_Name: temp_fiende_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,7 +244,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: 8e9c16940f8c34d84b493f1bbbec1873, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -265,7 +265,7 @@ Transform:
   m_GameObject: {fileID: 125497634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.037, y: 0.053, z: 0}
-  m_LocalScale: {x: 1.856376, y: 1.0732863, z: 1}
+  m_LocalScale: {x: 2.3, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 900882455}
   - component: {fileID: 900882454}
   m_Layer: 0
-  m_Name: temp_fiende_01_Project_KnightHood (2)
+  m_Name: temp_fiende_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,8 +441,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1138232193}
   - component: {fileID: 1138232192}
+  - component: {fileID: 1138232195}
+  - component: {fileID: 1138232194}
   m_Layer: 0
-  m_Name: "temp_karakta\u0308r_01_Project_KnightHood"
+  m_Name: "temp_karakta\u0308r_01"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,6 +512,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1138232194
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138232191}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1138232195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138232191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927cf3fa117c9400a89cfc6aa98cd73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1551165359
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +556,7 @@ GameObject:
   - component: {fileID: 1551165361}
   - component: {fileID: 1551165360}
   m_Layer: 0
-  m_Name: temp_fiende_01_Project_KnightHood (1)
+  m_Name: temp_fiende_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
