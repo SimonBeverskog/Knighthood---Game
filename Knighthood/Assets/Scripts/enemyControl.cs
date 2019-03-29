@@ -5,6 +5,9 @@ using UnityEngine;
 public class enemyControl : MonoBehaviour
 {
 
+    public float enemyCurrentHP = 100;
+    public float enemyMaxHP = 100;
+
     bool doFunction = true;
     // Start is called before the first frame update
     void Start()

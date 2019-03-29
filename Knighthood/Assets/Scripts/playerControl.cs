@@ -7,7 +7,11 @@ public class playerControl : MonoBehaviour
 
     Vector2 startPos;
     public cameraShake cameraShake;
-    // Start is called before the first frame update
+
+    public static float playerCurrentHP = 100;
+    public static float playerMaxHP = 100;
+    public Transform damageText;
+
     void Start()
     {
         startPos = transform.position;
@@ -18,7 +22,7 @@ public class playerControl : MonoBehaviour
     {
         //TODO : change from input 1 so that a player clicks his way to a spell instead.
         if (Input.GetKeyDown("1") && gameMasterControl.playerTurn) {
-
+            gameMasterControl.damageDealt = 50;
             GetComponent<Rigidbody2D>().position = new Vector2(0, 0);
             GetComponent<Transform>().localScale = new Vector3(0.8f, 0.8f, 0);
             StartCoroutine(attackWait());
@@ -26,6 +30,7 @@ public class playerControl : MonoBehaviour
         }
     }
 
+    // Attack animation, using IEnumerators
     IEnumerator returnPosition() {
         yield return new WaitForSeconds(1f);
         GetComponent<Rigidbody2D>().position = new Vector2(startPos.x, startPos.y);
@@ -38,12 +43,14 @@ public class playerControl : MonoBehaviour
         gameMasterControl.turnTimer++;
     }
 
+    // Attack animation, using IEnumerators
     IEnumerator moveBack() {
         yield return new WaitForSeconds(0.05f);
         GetComponent<Rigidbody2D>().velocity = new Vector2(-25f, 0);
         StartCoroutine(stopgoingBack());
     }
 
+    // Attack animation, using IEnumerators
     IEnumerator attackWait() {
 
         yield return new WaitForSeconds(1.5f);
@@ -52,10 +59,12 @@ public class playerControl : MonoBehaviour
 
     }
 
+    // Attack animation, using IEnumerators
     IEnumerator stopgoingBack() {
         yield return new WaitForSeconds(0.05f);
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         StartCoroutine(cameraShake.Shake(.08f, .2f));
         StartCoroutine(returnPosition());
+        Instantiate(damageText, new Vector2(3.36f, 2.75f), damageText.rotation);
     }
 }
