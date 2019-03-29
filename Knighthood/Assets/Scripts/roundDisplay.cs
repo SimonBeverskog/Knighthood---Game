@@ -10,13 +10,14 @@ public class roundDisplay : MonoBehaviour
     void Start()
     {
         //At the start we can safely set the turntimer to 1 always
-        gameMasterControl.turnTimer = 1;
+        //TODO right now we use 1.00001f since mathf.round rounds to closest even number and not upwards at 0.5f
+        gameMasterControl.turnTimer = 1.00001f;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Update the roundtimer based on the variable gameMaster keeps track of
-        roundCount.text = "Round : " + gameMasterControl.turnTimer.ToString();
+        roundCount.text = "Round : " + Mathf.Round(gameMasterControl.turnTimer/2).ToString();
     }
 }

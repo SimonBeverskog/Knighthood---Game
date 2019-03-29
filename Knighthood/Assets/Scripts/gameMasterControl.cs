@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class gameMasterControl : MonoBehaviour
 {
-
-    public static int turnTimer = 1;
+    //float instead of int to allow it to be divided by two and rounded
+    public static float turnTimer = 1.0f;
     public static bool playerTurn;
     // Start is called before the first frame update
     void Start()

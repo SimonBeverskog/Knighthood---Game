@@ -1,10 +1,25 @@
 ﻿<Properties StartupConfiguration="{8269134B-FEFF-5857-8C74-49400841FDC5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/enemyControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/playerControl.cs">
     <Files>
-      <File FileName="Assets/Scripts/playerControl.cs" Line="37" Column="65" />
-      <File FileName="Assets/Scripts/gameMasterControl.cs" Line="23" Column="1" />
-      <File FileName="Assets/Scripts/enemyControl.cs" Line="16" Column="9" />
+      <File FileName="Assets/Scripts/playerControl.cs" Line="59" Column="2" />
+      <File FileName="Assets/Scripts/gameMasterControl.cs" Line="7" Column="72" />
+      <File FileName="Assets/Scripts/enemyControl.cs" Line="5" Column="42" />
+      <File FileName="Assets/Scripts/roundDisplay.cs" Line="23" Column="1" />
+      <File FileName="Assets/Scripts/cameraShake.cs" Line="7" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Knighthood" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="playerControl.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
