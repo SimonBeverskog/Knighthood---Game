@@ -9,6 +9,7 @@ public class gameMasterControl : MonoBehaviour
     public static bool playerTurn;
 
     public static float damageDealt = 0;
+    public static bool displayDamageDealt = false;
 
 
     void Start()

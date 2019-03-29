@@ -66,5 +66,6 @@ public class playerControl : MonoBehaviour
         StartCoroutine(cameraShake.Shake(.08f, .2f));
         StartCoroutine(returnPosition());
         Instantiate(damageText, new Vector2(3.36f, 2.75f), damageText.rotation);
+        gameMasterControl.displayDamageDealt = true;
     }
 }

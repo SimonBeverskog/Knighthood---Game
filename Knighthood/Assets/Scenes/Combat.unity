@@ -206,6 +206,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCurrentHP: 100
   enemyMaxHP: 100
+  damageText: {fileID: 5275482130337852707, guid: a5f581be717ed4b8080e5fcaf0ffe776,
+    type: 3}
+  deathEffect: {fileID: 8603991407101701018, guid: 846f1518095d64511ae8d3bb8a4f2052,
+    type: 3}
 --- !u!1 &125497634
 GameObject:
   m_ObjectHideFlags: 0
