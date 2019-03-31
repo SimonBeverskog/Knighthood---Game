@@ -19,7 +19,7 @@ public class turnDisplay : MonoBehaviour
         if (gameMasterControl.playerTurn) {
             whoPlays.text = "Player turn";
         }
-        else {
+        if(!gameMasterControl.playerTurn){
             whoPlays.text = "Enemy turn";
         }
     }

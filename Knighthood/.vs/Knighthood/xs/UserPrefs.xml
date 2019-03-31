@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{8269134B-FEFF-5857-8C74-49400841FDC5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/damageDisplay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/turnDisplay.cs">
     <Files>
-      <File FileName="Assets/Scripts/playerControl.cs" Line="67" Column="44" />
-      <File FileName="Assets/Scripts/gameMasterControl.cs" Line="11" Column="41" />
-      <File FileName="Assets/Scripts/enemyControl.cs" Line="9" Column="17" />
+      <File FileName="Assets/Scripts/playerControl.cs" Line="34" Column="39" />
+      <File FileName="Assets/Scripts/gameMasterControl.cs" Line="68" Column="6" />
+      <File FileName="Assets/Scripts/enemyControl.cs" Line="22" Column="9" />
       <File FileName="Assets/Scripts/roundDisplay.cs" Line="13" Column="113" />
       <File FileName="Assets/Scripts/cameraShake.cs" Line="27" Column="1" />
-      <File FileName="Assets/Scripts/damageDisplay.cs" Line="10" Column="9" />
+      <File FileName="Assets/Scripts/damageDisplay.cs" Line="10" Column="52" />
+      <File FileName="Assets/Scripts/turnDisplay.cs" Line="22" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +15,7 @@
           <Node name="Knighthood" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="damageDisplay.cs" selected="True" />
+                <Node name="turnDisplay.cs" selected="True" />
               </Node>
             </Node>
           </Node>

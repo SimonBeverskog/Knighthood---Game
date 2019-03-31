@@ -6,15 +6,24 @@ public class playerControl : MonoBehaviour
 {
 
     Vector2 startPos;
-    public cameraShake cameraShake;
 
     public static float playerCurrentHP = 100;
     public static float playerMaxHP = 100;
     public Transform damageText;
+    public Transform deathEffect;
+
+    Vector3 originalPosition;
+    public float shakeStrength = 3;
+    public float shake = 1;
 
     void Start()
     {
         startPos = transform.position;
+    }
+
+    private void Awake()
+    {
+        Camera MainCamera = FindObjectOfType<Camera>();
     }
 
     // Update is called once per frame
@@ -27,6 +36,11 @@ public class playerControl : MonoBehaviour
             GetComponent<Transform>().localScale = new Vector3(0.8f, 0.8f, 0);
             StartCoroutine(attackWait());
 
+        }
+
+        if(playerCurrentHP <= 0) {
+            Destroy(gameObject);
+            Instantiate(deathEffect, gameObject.transform.localPosition, deathEffect.rotation);
         }
     }
 
@@ -63,7 +77,13 @@ public class playerControl : MonoBehaviour
     IEnumerator stopgoingBack() {
         yield return new WaitForSeconds(0.05f);
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        StartCoroutine(cameraShake.Shake(.08f, .2f));
+        //StartCoroutine(cameraShake.Shake(.08f, .2f));
+        Camera.main.transform.localPosition = originalPosition + (Random.insideUnitSphere * shake);
+        shake = Mathf.MoveTowards(shake, 0, Time.deltaTime * shakeStrength);
+        if (shake <= 0)
+        {
+            Camera.main.transform.localPosition = originalPosition;
+        }
         StartCoroutine(returnPosition());
         Instantiate(damageText, new Vector2(3.36f, 2.75f), damageText.rotation);
         gameMasterControl.displayDamageDealt = true;
