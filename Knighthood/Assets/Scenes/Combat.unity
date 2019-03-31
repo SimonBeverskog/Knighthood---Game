@@ -408,10 +408,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a44b54a2e5ce4bb0bb02bce7536d3c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_character: {fileID: 480100200233102101, guid: 5c14292eec60f4ee0b6f8448d4dad301,
+  player_character: {fileID: 521875787254879874, guid: a4a9a87466f45436a98af11369fd093f,
     type: 3}
   player_loc1: {fileID: 1709116210}
-  basic_enemy: {fileID: 4969893952026206991, guid: 351abb82d8db04b4291336866c12c72b,
+  basic_enemy: {fileID: 5240304036747984615, guid: cb863bd64875646e8bb49112a1b4b498,
     type: 3}
   enemy_loc1: {fileID: 928631750}
   enemy_loc2: {fileID: 1003345956}

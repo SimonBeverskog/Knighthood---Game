@@ -16,9 +16,13 @@ public class playerControl : MonoBehaviour
     public float shakeStrength = 3;
     public float shake = 1;
 
+
+    public healthBarController healthBar;
+
     void Start()
     {
         startPos = transform.position;
+        healthBar.updatehealthBar(1f);
     }
 
     private void Awake()
@@ -41,6 +45,11 @@ public class playerControl : MonoBehaviour
         if(playerCurrentHP <= 0) {
             Destroy(gameObject);
             Instantiate(deathEffect, gameObject.transform.localPosition, deathEffect.rotation);
+        }
+
+        if (gameMasterControl.playerTurn) {
+            Debug.Log("PlayerHP : " + playerCurrentHP);
+            healthBar.updatehealthBar(playerCurrentHP / 100);
         }
     }
 
@@ -80,7 +89,7 @@ public class playerControl : MonoBehaviour
         //StartCoroutine(cameraShake.Shake(.08f, .2f));
         Camera.main.transform.localPosition = originalPosition + (Random.insideUnitSphere * shake);
         shake = Mathf.MoveTowards(shake, 0, Time.deltaTime * shakeStrength);
-        if (shake <= 0)
+        if (shake <= 0.5)
         {
             Camera.main.transform.localPosition = originalPosition;
         }

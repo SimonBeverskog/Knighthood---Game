@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\damageDisplay.cs" />
     <Compile Include="Assets\Scripts\enemyControl.cs" />
     <Compile Include="Assets\Scripts\gameMasterControl.cs" />
+    <Compile Include="Assets\Scripts\healthBarController.cs" />
     <Compile Include="Assets\Scripts\playerControl.cs" />
     <Compile Include="Assets\Scripts\roundDisplay.cs" />
     <Compile Include="Assets\Scripts\turnDisplay.cs" />

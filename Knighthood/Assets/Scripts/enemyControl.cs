@@ -13,10 +13,11 @@ public class enemyControl : MonoBehaviour
     int attackingTarget;
 
     //TODO there's gotta be a better way than this
-    public static bool doFunction = true;
+    public static bool attackonlyOnce = true;
     bool doOnce = true;
 
-    // Start is called before the first frame update
+    public healthBarController healthBar;
+
     void Start()
     {
     }
@@ -28,11 +29,11 @@ public class enemyControl : MonoBehaviour
             doFunction = true;
         }*/
 
-        if (!gameMasterControl.playerTurn && doFunction &&((int) gameMasterControl.positionIdentifier == (int) transform.position.x))
+        if (!gameMasterControl.playerTurn && attackonlyOnce &&((int) gameMasterControl.positionIdentifier == (int) transform.position.x))
         {
                 //TODO enemies turn to act, it needs to choose a character, choose an attack and choose a target
                 // pass for now
-                doFunction = false;
+                attackonlyOnce = false;
                 Debug.Log("posIdentifier = " + (int)gameMasterControl.positionIdentifier);
                 Debug.Log("enemy : " + (int)transform.localPosition.x + "attacks");
                 StartCoroutine(delayMove());
@@ -47,6 +48,11 @@ public class enemyControl : MonoBehaviour
             Destroy(gameObject);
             Instantiate(deathEffect, gameObject.transform.localPosition, deathEffect.rotation);
             doOnce = false;
+        }
+
+        if (!gameMasterControl.playerTurn) {
+            Debug.Log("EnemyHP : " + enemyCurrentHP);
+            healthBar.updatehealthBar(enemyCurrentHP / 100);
         }
     }
 
@@ -77,6 +83,6 @@ public class enemyControl : MonoBehaviour
         Instantiate(damageText, new Vector2(-6f, 2.7f), damageText.rotation);
         gameMasterControl.playerTurn = true;
         gameMasterControl.turnTimer++;
-        doFunction = true;
+        attackonlyOnce = true;
     }
 }

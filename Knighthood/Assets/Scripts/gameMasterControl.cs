@@ -44,7 +44,7 @@ public class gameMasterControl : MonoBehaviour
     void Update()
     {
         //Its the enemies turn to attack, choose who will attack
-        if (!playerTurn && enemyControl.doFunction) {
+        if (!playerTurn && enemyControl.attackonlyOnce) {
             int whoAttacks = Random.Range(1, 4);
             switch (whoAttacks) {
 
@@ -64,6 +64,5 @@ public class gameMasterControl : MonoBehaviour
                     break;
             }
         }
-
     }
 }
