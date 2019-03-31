@@ -16,8 +16,11 @@ public class playerControl : MonoBehaviour
     public float shakeStrength = 3;
     public float shake = 1;
 
-
+    //healthbar variables
     public healthBarController healthBar;
+
+    //popup menu variables
+    public GameObject menu;
 
     void Start()
     {
@@ -50,6 +53,13 @@ public class playerControl : MonoBehaviour
         if (gameMasterControl.playerTurn) {
             Debug.Log("PlayerHP : " + playerCurrentHP);
             healthBar.updatehealthBar(playerCurrentHP / 100);
+        }
+
+        if (Input.GetMouseButtonDown(0)) {
+
+            Debug.Log("mousedown on object");
+            //menu.SetActive(true);
+            Instantiate(menu, gameObject.transform.localPosition, gameObject.transform.rotation);
         }
     }
 
