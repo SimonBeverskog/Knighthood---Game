@@ -12,10 +12,6 @@ public class playerControl : MonoBehaviour
     public Transform damageText;
     public Transform deathEffect;
 
-    Vector3 originalPosition;
-    public float shakeStrength = 3;
-    public float shake = 1;
-
     //healthbar variables
     public healthBarController healthBar;
 
@@ -36,7 +32,7 @@ public class playerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //TODO : change from input 1 so that a player clicks his way to a spell instead.
+        //TODO : change from input 1 so that a player clicks his way to an attack instead.
         if (Input.GetKeyDown("1") && gameMasterControl.playerTurn) {
             gameMasterControl.damageDealt = 50;
             GetComponent<Rigidbody2D>().position = new Vector2(0, 0);
@@ -97,12 +93,6 @@ public class playerControl : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         //StartCoroutine(cameraShake.Shake(.08f, .2f));
-        Camera.main.transform.localPosition = originalPosition + (Random.insideUnitSphere * shake);
-        shake = Mathf.MoveTowards(shake, 0, Time.deltaTime * shakeStrength);
-        if (shake <= 0.5)
-        {
-            Camera.main.transform.localPosition = originalPosition;
-        }
         StartCoroutine(returnPosition());
         Instantiate(damageText, new Vector2(3.36f, 2.75f), damageText.rotation);
         gameMasterControl.displayDamageDealt = true;
